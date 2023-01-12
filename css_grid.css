@@ -1,0 +1,89 @@
+@media (max-width: 412px) {
+  #app {
+    grid-template-areas:
+      "primary-nav primary-nav primary-nav"
+      "header header header"
+      "main-content main-content main-content"
+      "footer footer footer";
+    grid-auto-rows: 3fr;
+    grid-auto-columns: 3fr;
+    grid-auto-flow: row;
+  }
+}
+
+@media (min-width: 413px) {
+  #app {
+    grid-template-areas:
+      "primary-nav header header header"
+      "primary-nav main-content main-content main-content"
+      "primary-nav footer footer footer";
+    grid-template-columns: min-content min-content min-content fit-content;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+    grid-auto-columns: 1fr;
+  }
+}
+
+#app {
+  display: grid;
+  gap: 8px;
+  height: 90vh;
+
+}
+
+#header {
+  grid-area: header;
+  font-size: 4rem;
+}
+
+#footer {
+  grid-area: footer;
+}
+
+#main-content {
+  grid-area: main-content;
+  overflow: scroll;
+  padding: 8px;
+}
+
+#main-content > article > p {
+  max-width: 80%;
+}
+
+#main-content > article > h2 {
+  max-width: 80%;
+}
+
+#primary-nav {
+  grid-area: primary-nav;
+  min-width: max-content;
+}
+
+#primary-nav > ul {
+  padding: 8px;
+}
+
+#primary-nav > ul > li {
+  list-style: none;
+}
+
+#app > * {
+  border: 1px solid black;
+}
+
+blockquote {
+  background-color: powderblue;
+  padding: 8px;
+  border-radius: 8px;
+  margin-left: 0;
+}
+
+code {
+  background-color: peachpuff;
+  padding: 1px;
+}
+
+pre {
+  background-color: peachpuff;
+  padding: 1px;
+}

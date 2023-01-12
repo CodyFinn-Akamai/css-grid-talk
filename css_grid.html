@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Grid Example</title>
+    <link rel="stylesheet" href="./css_grid.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header id="header">CSS Grid Talk</header>
+      <nav id="primary-nav">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#">Featured</a></li>
+          <li><a href="#">Archives</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+      <main id="main-content">
+        <article>
+          <h1>CSS Grid</h1>
+          <h2>What is Grid layout?</h2>
+          <figure>
+            <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">
+              <p>
+                CSS Grid Layout excels at dividing a page into major regions or defining the relationship in terms of size, position, and layer, between parts of a control built from HTML primitives.
+              </p>
+            </blockquote>
+            <figcaption>-MDN, <cite>CSS Grid Layout</cite></figcaption>
+          </figure>
+          <p>
+            CSS Grid is magic and works just like you would think a layout does. It allows you to visually create a layout using the
+            <code>grid-template-areas</code>,
+            <code>grid-template-rows</code>,
+            <code>grid-template-columns</code>
+            rules. It is not restricted to just static layouts though. The
+            <code>grid-auto-rows</code>,
+            <code>grid-auto-columns</code>, and
+            <code>grid-auto-flow</code> rules
+            allow you to define how the browser should handle items beyond what is
+            defined using a template rule. For example if you click
+            <button id="append-button">this button</button> a new item will be
+            appended to the grid. Since this grid is defined with the following rules:
+            <pre>
+            <code>
+grid-template-areas:
+      "primary-nav header header header"
+      "primary-nav main-content main-content main-content"
+      "primary-nav footer footer footer";
+    grid-template-columns: min-content min-content min-content fit-content;
+    grid-auto-flow: row;
+    grid-auto-rows: min-content;
+    grid-auto-columns: 1fr;
+            </code>
+            </pre>
+            The new items are placed along the bottom in equally sized and spaced boxes.
+          </p>
+          <h2>Chapter 2</h2>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam voluptas est. Aperiam
+            dignissimos sapiente recusandae dolores laudantium atque vel non. Nostrum
+            rerum rerum sed sint qui porro dolore saepe. Et ut cumque voluptatem
+            voluptate voluptatem. Ut distinctio veniam modi molestiae et qui eum
+            incidunt.
+          </p>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam voluptas est.
+            Aperiam dignissimos sapiente recusandae dolores laudantium atque vel
+            non. Nostrum rerum rerum sed sint qui porro dolore saepe. Et ut cumque
+            voluptatem voluptate voluptatem. Ut distinctio veniam modi molestiae
+            et qui eum incidunt.
+          </p>
+          <h2>Chapter 3</h2>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam voluptas est.
+            Aperiam dignissimos sapiente recusandae dolores laudantium atque
+            vel non. Nostrum rerum rerum sed sint qui porro dolore saepe. Et
+            ut cumque voluptatem voluptate voluptatem. Ut distinctio veniam
+            modi molestiae et qui eum incidunt.
+          </p>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam voluptas
+            est. Aperiam dignissimos sapiente recusandae dolores laudantium
+            atque vel non. Nostrum rerum rerum sed sint qui porro dolore
+            saepe. Et ut cumque voluptatem voluptate voluptatem. Ut
+            distinctio veniam modi molestiae et qui eum incidunt.
+          </p>
+          <h2>Chapter 4</h2>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam
+            voluptas est. Aperiam dignissimos sapiente recusandae
+            dolores laudantium atque vel non. Nostrum rerum rerum sed
+            sint qui porro dolore saepe. Et ut cumque voluptatem
+            voluptate voluptatem. Ut distinctio veniam modi molestiae
+            et qui eum incidunt.
+          </p>
+          <p>
+            Mollitia qui voluptas occaecati quasi tempora aliquam
+            voluptas est. Aperiam dignissimos sapiente recusandae
+            dolores laudantium atque vel non. Nostrum rerum rerum
+            sed sint qui porro dolore saepe. Et ut cumque
+            voluptatem voluptate voluptatem. Ut distinctio
+            veniam modi molestiae et qui eum incidunt.
+          </p>
+        </article>
+      </main>
+      <footer id="footer">Contact info and site map</footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
